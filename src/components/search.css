@@ -1,0 +1,152 @@
+button, input {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button {
+    text-transform: none;
+}
+
+button, html [type="button"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring, [type="button"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.s003 {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #a598ee;
+    background-size: cover;
+    background-position: center center;
+}
+
+.s003 form {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 0;
+}
+
+.s003 form .inner-form {
+    background: #fff;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+
+.s003 form .inner-form .input-field {
+    height: 68px;
+}
+
+.s003 form .inner-form .input-field input {
+    height: 100%;
+    background: transparent;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 10px 32px;
+    font-size: 16px;
+    color: #555;
+}
+
+.s003 form .inner-form .input-field input:-moz-placeholder {
+    color: #888;
+    font-size: 16px;
+}
+
+.s003 form .inner-form .input-field input::-webkit-input-placeholder {
+    color: #888;
+    font-size: 16px;
+}
+
+.s003 form .inner-form .input-field input:hover, .s003 form .inner-form .input-field input:focus {
+    box-shadow: none;
+    outline: 0;
+    border-color: #fff;
+}
+
+.s003 form .inner-form .input-field.second-wrap {
+    flex-grow: 1;
+}
+
+.s003 form .inner-form .input-field.third-wrap {
+    width: 74px;
+}
+
+.s003 form .inner-form .input-field.third-wrap .btn-search {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    background: #63c76a;
+    transition: all .2s ease-out, color .2s ease-out;
+}
+
+
+.s003 form .inner-form .input-field.third-wrap .btn-search svg {
+    width: 16px;
+}
+
+.s003 form .inner-form .input-field.third-wrap .btn-search:hover {
+    background: #50c058;
+}
+
+.s003 form .inner-form .input-field.third-wrap .btn-search:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 767px) {
+    .s003 form .inner-form {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .s003 form .inner-form .input-field {
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .s003 form .inner-form .input-field input {
+        padding: 10px 15px;
+    }
+
+    .s003 form .inner-form .input-field.second-wrap {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .s003 form .inner-form .input-field.second-wrap input {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .s003 form .inner-form .input-field.third-wrap {
+        margin-bottom: 0;
+        width: 100%;
+    }
+}
