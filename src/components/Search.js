@@ -6,10 +6,11 @@ const Search = () => {
   return (
     <div className="s003">
       <form>
-        <h1 className="text-center display-4 text-body">Search for GIFS</h1>
+        <h1 className="text-center my-text mb-3">How are you feeling today?</h1>
         <div className="inner-form">
           <div className="input-field second-wrap">
-            <input id="search" type="text" placeholder="Prequel GIFS..."/>
+            <input id="search" type="text" placeholder="I'm happy..."/>
+            <small className="my-text pl-2">Tell us how you're feeling and we'll match it with a GIF</small>
           </div>
           <div className="input-field third-wrap">
             <button className="btn-search" type="button">

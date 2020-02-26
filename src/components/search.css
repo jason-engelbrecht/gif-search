@@ -30,6 +30,10 @@ button:-moz-focusring, [type="button"]:-moz-focusring {
     box-sizing: border-box;
 }
 
+.my-text {
+    color: #303030;
+}
+
 .s003 {
     min-height: 100vh;
     display: flex;

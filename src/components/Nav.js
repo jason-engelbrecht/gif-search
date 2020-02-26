@@ -4,36 +4,24 @@ import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNav
 import { BrowserRouter as Router } from 'react-router-dom';
 
 class Nav extends Component {
-  state = {
-    isOpen: false
-  };
-
-  toggleCollapse = () => {
-    this.setState({ isOpen: !this.state.isOpen });
-  };
-
   render() {
     return (
       <Router>
-        <MDBNavbar className="my-navbar" dark expand="md">
+        <MDBNavbar className="my-navbar z-depth-0" dark transparent>
           <MDBNavbarBrand>
-            <h3 className="my-1">
+            <h2 className="my-1">
               <MDBIcon icon="grin-squint-tears" size="lg" className="mr-2"/>
-              GIF Search
-            </h3>
+              GIF Match
+            </h2>
           </MDBNavbarBrand>
 
-          <MDBNavbarToggler onClick={this.toggleCollapse} />
-
-          <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-            <MDBNavbarNav right>
-              <MDBNavItem>
-                <MDBNavLink className="waves-effect waves-light" to="#!">
-                  Sign Up
-                </MDBNavLink>
-              </MDBNavItem>
-            </MDBNavbarNav>
-          </MDBCollapse>
+          <MDBNavbarNav right>
+            <MDBNavItem>
+              <MDBNavLink className="waves-effect waves-light" to="#!">
+                Sign Up
+              </MDBNavLink>
+            </MDBNavItem>
+          </MDBNavbarNav>
         </MDBNavbar>
       </Router>
     );
