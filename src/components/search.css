@@ -35,7 +35,7 @@ button:-moz-focusring, [type="button"]:-moz-focusring {
 }
 
 .s003 {
-    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     padding-top: 100px;
