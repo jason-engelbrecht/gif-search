@@ -1,29 +1,19 @@
 import React, { Component } from "react";
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
-  MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MDBNavbar, MDBNavbarBrand, MDBIcon } from "mdbreact";
 
 class Nav extends Component {
   render() {
     return (
-      <Router>
-        <MDBNavbar className="my-navbar z-depth-0" dark transparent>
+      <>
+        <MDBNavbar className="my-bg z-depth-0" dark transparent>
           <MDBNavbarBrand>
-            <h2 className="my-1">
+            <h2 className="my-1 title-text">
               <MDBIcon icon="grin-squint-tears" size="lg" className="mr-2"/>
-              GIF Match
+              <span className="text-dark">GIF</span>Match
             </h2>
           </MDBNavbarBrand>
-
-          <MDBNavbarNav right>
-            <MDBNavItem>
-              <MDBNavLink className="waves-effect waves-light" to="#!">
-                Sign Up
-              </MDBNavLink>
-            </MDBNavItem>
-          </MDBNavbarNav>
         </MDBNavbar>
-      </Router>
+      </>
     );
   }
 }

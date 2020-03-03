@@ -1,9 +1,18 @@
-.my-navbar {
+.my-bg {
     background-color: #a598ee;
 }
 
-.empty {
-    height: 500px;
+.gif {
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 

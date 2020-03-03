@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './search.css';
+import { MDBView, MDBAnimation } from "mdbreact";
+import './Search.css';
 import * as api from "../api";
 
 class Search extends Component {
 
-  state = {};
-
+  //get matching gif from api w phrase
   getMatchingGif = (phrase) => {
     api.fetchMatchingGIF(phrase).then(data => {
       this.setState(data);
@@ -14,22 +14,31 @@ class Search extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.getMatchingGif(this.refs.gifPhrase.value)
+
+    if(this.refs.gifPhrase.value) { //search w phrase
+      this.getMatchingGif(this.refs.gifPhrase.value)
+    }
+    else { //nothing - try again
+      this.getMatchingGif('try again')
+    }
+
+    //clear
     this.refs.gifPhrase.value = '';
   };
 
   render() {
     return (
       <div>
-        <div className="s003">
+        <div className="search-container">
           <form onSubmit={this.handleSubmit}>
-            <h1 className="text-center my-text mb-3">How are you feeling today?</h1>
+            <h1 className="text-center my-text mb-3">Let's match you with a <span className="text-white title-text">GIF</span></h1>
             <div className="inner-form">
               <div className="input-field second-wrap">
                 <input id="search"
                        type="text"
-                       placeholder="I'm happy..."
+                       placeholder="Enter something..."
                        ref="gifPhrase" />
+                       <small className="float-right my-text">powered by &copy; <strong>GIPHY</strong></small>
               </div>
               <div className="input-field third-wrap">
                 <button className="btn-search" type="submit">
@@ -44,17 +53,13 @@ class Search extends Component {
           </form>
         </div>
 
-        <div className="my-navbar pt-5 gif">
-          <iframe
-            src={this.state ? this.state.embed_url : console.log("nah")}
-            width="100%" height="100%"
-            frameBorder="0" className="giphy-embed">
-          </iframe>
+        <div className="my-bg pt-5">
+          <MDBAnimation type={this.state ? "fadeInUp" : console.log('no')}>
+            <MDBView zoom>
+              <img src={this.state ? this.state.images.downsized.url : console.log('nah')} className="gif z-depth-1" alt=""/>
+            </MDBView>
+          </MDBAnimation>
         </div>
-
-        <div className="empty my-navbar">
-        </div>
-
       </div>
     );
   }
