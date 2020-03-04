@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 import {MDBNavbar, MDBNavbarBrand, MDBIcon, MDBNavbarNav} from "mdbreact";
+import * as api from "../api";
 
 class Nav extends Component {
+
+  getCount = () => {
+    api.fetchCount().then(data => {
+      this.setState(data.count);
+    });
+  };
+
   render() {
     return (
       <>
@@ -17,7 +25,7 @@ class Nav extends Component {
             <h5 className="text-white mb-0 pt-2">
               <span className="title-text"><span className="text-dark">GIF</span>MATCH</span>'s so far
             </h5>
-            <h5 className="text-center count">1,256,145</h5>
+            <h5 className="text-center count">{this.getCount()}{this.state ? this.state.count : console.log('nah')}</h5>
           </MDBNavbarNav>
         </MDBNavbar>
       </>
