@@ -5,7 +5,7 @@ class Nav extends Component {
   render() {
     return (
       <>
-        <MDBNavbar className="my-bg z-depth-0" dark transparent>
+        <MDBNavbar className="z-depth-0" dark transparent>
           <MDBNavbarBrand>
             <h2 className="my-1 title-text">
               <MDBIcon icon="grin-squint-tears" size="lg" className="mr-2"/>

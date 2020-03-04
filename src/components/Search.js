@@ -53,13 +53,15 @@ class Search extends Component {
           </form>
         </div>
 
-        <div className="my-bg pt-5">
+        <div className="pt-5">
           <MDBAnimation type={this.state ? "fadeInUp" : console.log('no')}>
             <MDBView zoom>
               <img src={this.state ? this.state.images.downsized.url : console.log('nah')} className="gif z-depth-1" alt=""/>
             </MDBView>
           </MDBAnimation>
         </div>
+
+        <div className="empty"></div>
       </div>
     );
   }
