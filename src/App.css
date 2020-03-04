@@ -6,6 +6,14 @@ body {
     height: 100px;
 }
 
+.count {
+    letter-spacing: 2px;
+    color: #63c76a;
+    background-color: #383838;
+    font-family: 'Oxanium', cursive;
+    padding-top: 2px;
+}
+
 .gif {
     height: 50vh;
     display: block;
@@ -22,10 +30,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
-}
-
-.footer {
-
+    letter-spacing: 1px;
 }
 
 

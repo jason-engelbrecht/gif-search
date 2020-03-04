@@ -31,7 +31,7 @@ class Search extends Component {
       <div>
         <div className="search-container">
           <form onSubmit={this.handleSubmit}>
-            <h1 className="text-center my-text mb-3">Let's match you with a <span className="text-white title-text">GIF</span></h1>
+            <h1 className="text-center text-dark mb-3">Let's match you with a <span className="text-white title-text">GIF</span></h1>
             <div className="inner-form">
               <div className="input-field second-wrap">
                 <input id="search"
