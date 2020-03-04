@@ -8,4 +8,16 @@ export const fetchMatchingGIF = (matchPhrase) => {
   ).then(resp => resp.data.data);
 };
 
+export const fetchCount = () => {
+  return axios.get(
+    'https://gif-match.azurewebsites.net/api/count'
+  ).then(resp => resp.data);
+};
+
+export const incrementCount = () => {
+  return axios.get(
+    'https://gif-match.azurewebsites.net/api/increment'
+  ).then(resp => resp.data);
+};
+
 

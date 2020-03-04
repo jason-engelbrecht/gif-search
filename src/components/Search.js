@@ -17,6 +17,9 @@ class Search extends Component {
 
     if(this.refs.gifPhrase.value) { //search w phrase
       this.getMatchingGif(this.refs.gifPhrase.value)
+      api.fetchCount().then(data => {
+        console.log(data);
+      })
     }
     else { //nothing - try again
       this.getMatchingGif('try again')
