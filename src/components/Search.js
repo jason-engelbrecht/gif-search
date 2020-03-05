@@ -21,10 +21,8 @@ class Search extends Component {
     }
     else { //nothing - try again
       this.getMatchingGif('try again')
+      this.refs.gifPhrase.value = 'try again';
     }
-
-    //clear
-    this.refs.gifPhrase.value = '';
   };
 
   render() {
@@ -55,9 +53,11 @@ class Search extends Component {
         </div>
 
         <div className="pt-5">
-          <MDBAnimation type={this.state ? "fadeInUp" : console.log('no')}>
+          <MDBAnimation type={this.state ? "fadeInUp" : ""}>
             <MDBView zoom>
-              <img src={this.state ? this.state.images.downsized.url : console.log('nah')} className="gif z-depth-1" alt=""/>
+              <a href={this.state ? this.state.url : "#"} target="_blank" rel="noopener noreferrer">
+                <img src={this.state ? this.state.images.downsized.url : ""} className="gif z-depth-1" alt=""/>
+              </a>
             </MDBView>
           </MDBAnimation>
         </div>

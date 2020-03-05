@@ -25,7 +25,12 @@ class Nav extends Component {
             <h5 className="text-white mb-0 pt-2">
               <span className="title-text"><span className="text-dark">GIF</span>MATCH</span>'s so far
             </h5>
-            <h5 className="text-center count">{this.getCount()}{this.state ? this.state.count : console.log('nah')}</h5>
+            <h5 className="text-center count">
+              {this.getCount()}{this.state ? this.state.count
+              : <div className="spinner-border spinner-border-sm" role="status">
+                  <span className="sr-only">Loading...</span>
+                </div>}
+            </h5>
           </MDBNavbarNav>
         </MDBNavbar>
       </>
