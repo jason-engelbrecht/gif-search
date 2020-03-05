@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {MDBNavbar, MDBNavbarBrand, MDBIcon, MDBNavbarNav} from "mdbreact";
+import {MDBNavbar, MDBNavbarBrand, MDBIcon} from "mdbreact";
 import * as api from "../api";
 
 class Nav extends Component {
@@ -11,9 +11,11 @@ class Nav extends Component {
   };
 
   render() {
+    let width = window.innerWidth;
+
     return (
       <>
-        <MDBNavbar className="z-depth-0 nav-my" dark transparent>
+        <MDBNavbar className="z-depth-0" dark transparent>
           <MDBNavbarBrand>
             <h2 className="mb-1 title-text">
               <MDBIcon icon="grin-squint-tears" size="lg" className="mr-2"/>
@@ -21,17 +23,17 @@ class Nav extends Component {
             </h2>
           </MDBNavbarBrand>
 
-          <MDBNavbarNav right>
+          <ul data-test="navbar-nav" className={width <= 460 ? "mr-auto navbar-nav" : "ml-auto navbar-nav"}>
             <h5 className="text-white mb-0 pt-2">
               <span className="title-text"><span className="text-dark">GIF</span>MATCH</span>'s so far
             </h5>
             <h5 className="text-center count">
               {this.getCount()}{this.state ? this.state.count
               : <div className="spinner-border spinner-border-sm" role="status">
-                  <span className="sr-only">Loading...</span>
-                </div>}
+                <span className="sr-only">Loading...</span>
+              </div>}
             </h5>
-          </MDBNavbarNav>
+          </ul>
         </MDBNavbar>
       </>
     );

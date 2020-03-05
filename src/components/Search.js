@@ -55,7 +55,7 @@ class Search extends Component {
         <div className="pt-5">
           <MDBAnimation type={this.state ? "fadeInUp" : ""}>
             <MDBView zoom>
-              <a href={this.state ? this.state.url : "#"} target="_blank" rel="noopener noreferrer">
+              <a href={this.state ? this.state.url : "#"}>
                 <img src={this.state ? this.state.images.downsized.url : ""} className="gif z-depth-1" alt=""/>
               </a>
             </MDBView>
