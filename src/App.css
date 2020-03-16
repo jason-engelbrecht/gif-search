@@ -26,11 +26,24 @@ body {
         height: 25vh;
     }
 }
+
 .title-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+@media screen and (max-width: 465px) {
+    .navbar-nav {
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 466px) {
+    .navbar-nav {
+        margin-left: auto;
+    }
 }
 
 

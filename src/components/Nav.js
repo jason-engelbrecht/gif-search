@@ -11,8 +11,6 @@ class Nav extends Component {
   };
 
   render() {
-    let width = window.innerWidth;
-
     return (
       <>
         <MDBNavbar className="z-depth-0" dark transparent>
@@ -23,13 +21,14 @@ class Nav extends Component {
             </h2>
           </MDBNavbarBrand>
 
-          <ul data-test="navbar-nav" className={width <= 460 ? "mr-auto navbar-nav" : "ml-auto navbar-nav"}>
+          <ul data-test="navbar-nav" className="navbar-nav">
             <h5 className="text-white mb-0 pt-2">
               <span className="title-text"><span className="text-dark">GIF</span>MATCH</span>'s so far
             </h5>
             <h5 className="text-center count">
               {this.getCount()}{this.state ? this.state.count
-              : <div className="spinner-border spinner-border-sm" role="status">
+              :
+              <div className="spinner-border spinner-border-sm" role="status">
                 <span className="sr-only">Loading...</span>
               </div>}
             </h5>
