@@ -16,11 +16,11 @@ class Search extends Component {
     event.preventDefault();
 
     if(this.refs.gifPhrase.value) { //search w phrase
-      this.getMatchingGif(this.refs.gifPhrase.value)
+      this.getMatchingGif(this.refs.gifPhrase.value);
       api.incrementCount(); //increment match count
     }
     else { //nothing - try again
-      this.getMatchingGif('try again')
+      this.getMatchingGif('try again');
       this.refs.gifPhrase.value = 'try again';
     }
   };
@@ -30,14 +30,15 @@ class Search extends Component {
       <div>
         <div className="search-container">
           <form onSubmit={this.handleSubmit}>
-            <h1 className="text-center text-dark mb-3">Let's match you with a <span className="text-white title-text">GIF</span></h1>
+            <h1 className="h1-responsive text-center text-dark mb-3">Let's match you with a <span
+              className="text-white title-text">GIF</span></h1>
             <div className="inner-form">
               <div className="input-field second-wrap">
                 <input id="search"
                        type="text"
                        placeholder="Enter something..."
-                       ref="gifPhrase" />
-                       <small className="float-right my-text">powered by &copy; <strong>GIPHY</strong></small>
+                       ref="gifPhrase"/>
+                <small className="float-right my-text">powered by &copy; <strong>GIPHY</strong></small>
               </div>
               <div className="input-field third-wrap">
                 <button className="btn-search" type="submit">

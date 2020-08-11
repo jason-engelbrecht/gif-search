@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "GIFMatch",
+  "name": "Matches a phrase or word with the perfect GIF.",
   "icons": [
     {
       "src": "favicon.ico",

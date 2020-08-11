@@ -3,7 +3,7 @@
   "author": "Jason Engelbrecht",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "This app allows a GIF to be matched with an entered phrase",
+  "description": "This app allows a GIF to be matched with an entered phrase or word",
   "private": true,
   "repository": {
     "type": "git",
