@@ -8,6 +8,7 @@ class Search extends Component {
   //get matching gif from api w phrase
   getMatchingGif = (phrase) => {
     api.fetchMatchingGIF(phrase).then(data => {
+      console.log(data);
       this.setState(data);
     });
   };
@@ -38,7 +39,6 @@ class Search extends Component {
                        type="text"
                        placeholder="Enter something..."
                        ref="gifPhrase"/>
-                <small className="float-right my-text">powered by &copy; <strong>GIPHY</strong></small>
               </div>
               <div className="input-field third-wrap">
                 <button className="btn-search" type="submit">
@@ -50,6 +50,8 @@ class Search extends Component {
                 </button>
               </div>
             </div>
+            <small className="float-right giphy-powered">powered by &copy; <strong>GIPHY</strong></small>
+
           </form>
         </div>
 
@@ -57,7 +59,8 @@ class Search extends Component {
           <MDBAnimation type={this.state ? "fadeInUp" : ""}>
             <MDBView zoom>
               <a href={this.state ? this.state.url : "#"}>
-                <img src={this.state ? this.state.images.downsized.url : ""} className="gif z-depth-1" alt=""/>
+                <img src={this.state ? this.state.images.downsized.url : ""} className="gif z-depth-1"
+                     alt={this.state ? this.state.title : ""}/>
               </a>
             </MDBView>
           </MDBAnimation>

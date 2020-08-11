@@ -21,12 +21,6 @@ body {
     margin-right: auto;
 }
 
-@media screen and (max-width: 775px) {
-    .gif {
-        height: 25vh;
-    }
-}
-
 .title-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -34,15 +28,41 @@ body {
     letter-spacing: 1px;
 }
 
-@media screen and (max-width: 465px) {
-    .navbar-nav {
-        margin-right: auto;
+@media screen and (max-width: 775px) {
+    .gif {
+        height: 25vh;
     }
 }
 
-@media screen and (min-width: 466px) {
-    .navbar-nav {
-        margin-left: auto;
+@media screen and (max-width: 768px) {
+    .nav-title {
+        font-size: 28px;
+    }
+
+    .counter-title {
+        font-size: 18px;
+    }
+
+    .count {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .nav-title {
+        font-size: 23px;
+    }
+
+    .counter-title {
+        font-size: 15px;
+    }
+
+    .count {
+        font-size: 15px;
+    }
+
+    .footer-text {
+        font-size: 12px;
     }
 }
 
