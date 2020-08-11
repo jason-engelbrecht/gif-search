@@ -8,7 +8,6 @@ class Search extends Component {
   //get matching gif from api w phrase
   getMatchingGif = (phrase) => {
     api.fetchMatchingGIF(phrase).then(data => {
-      console.log(data);
       this.setState(data);
     });
   };
