@@ -103,6 +103,7 @@ button:-moz-focusring, [type="button"]:-moz-focusring {
     cursor: pointer;
     background: #63c76a;
     transition: all .2s ease-out, color .2s ease-out;
+    border-radius: 0 3px 3px 0;
 }
 
 
@@ -135,10 +136,17 @@ button:-moz-focusring, [type="button"]:-moz-focusring {
         height: 58px;
     }
 
+    .search-container form .inner-form .input-field.third-wrap {
+        width: 64px;
+    }
+
     .giphy-powered {
         font-size: 11px;
         padding-top: 1px;
+    }
 
+    .search-container form .inner-form .input-field.third-wrap .btn-search svg {
+        width: 14px;
     }
 }
 
@@ -157,10 +165,14 @@ button:-moz-focusring, [type="button"]:-moz-focusring {
     }
 
     .search-container form .inner-form .input-field.third-wrap {
-        width: 54px;
+        width: 50px;
     }
 
     .giphy-powered {
         font-size: 9px;
+    }
+
+    .search-container form .inner-form .input-field.third-wrap .btn-search svg {
+        width: 12px;
     }
 }

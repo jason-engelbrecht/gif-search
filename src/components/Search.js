@@ -55,7 +55,7 @@ class Search extends Component {
           </form>
         </div>
 
-        <div className="pt-5">
+        <div className="pt-4">
           <MDBAnimation type={this.state ? "fadeInUp" : ""}>
             <MDBView zoom>
               <a href={this.state ? this.state.url : "#"}>
