@@ -28,6 +28,14 @@ body {
     letter-spacing: 1px;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
 @media screen and (max-width: 775px) {
     .gif {
         height: 25vh;
