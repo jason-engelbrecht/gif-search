@@ -4,14 +4,21 @@ import Search from './components/Search';
 import Nav from './components/Nav';
 import Footer from "./components/Footer";
 
-const App = () => {
-  return (
-    <>
-      <Nav/>
-      <Search/>
-      <Footer/>
-    </>
-  );
-};
+class App extends React.Component {
+
+  getCount() {
+    //increment count
+  }
+
+  render() {
+    return (
+      <>
+        <Nav/>
+        <Search/>
+        <Footer/>
+      </>
+    );
+  }
+}
 
 export default App;

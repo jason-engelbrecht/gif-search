@@ -41,7 +41,7 @@ button:-moz-focusring, [type="button"]:-moz-focusring {
 
 .search-container form {
     width: 100%;
-    max-width: 900px;
+    max-width: 800px;
     margin-bottom: 0;
 }
 
@@ -56,7 +56,7 @@ button:-moz-focusring, [type="button"]:-moz-focusring {
 }
 
 .search-container form .inner-form .input-field {
-    height: 68px;
+    height: 63px;
 }
 
 .search-container form .inner-form .input-field input {
