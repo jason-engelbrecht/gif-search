@@ -5,7 +5,6 @@ import * as api from "../api";
 
 class Search extends Component {
 
-  //get matching gif from api w phrase
   getMatchingGif = (phrase) => {
     api.fetchMatchingGIF(phrase).then(data => {
       this.setState(data);
@@ -15,18 +14,19 @@ class Search extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    if(this.refs.gifPhrase.value) { //search w phrase
+    if(this.refs.gifPhrase.value) {
       this.getMatchingGif(this.refs.gifPhrase.value);
-      api.incrementCount(); //increment match count
+      api.incrementCount()
+        .then(() => this.props.updateCount());
     }
-    else { //nothing - try again
+    else {
       this.getMatchingGif('try again');
       this.refs.gifPhrase.value = 'try again';
     }
   };
 
   render() {
-    return (
+   return (
       <div>
         <div className="search-container">
           <form onSubmit={this.handleSubmit}>

@@ -1,14 +1,7 @@
 import React, { Component } from "react";
 import {MDBNavbar, MDBNavbarBrand, MDBIcon} from "mdbreact";
-import * as api from "../api";
 
 class Nav extends Component {
-
-  getCount = () => {
-    api.fetchCount().then(data => {
-      this.setState(data.count);
-    });
-  };
 
   render() {
     return (
@@ -26,7 +19,7 @@ class Nav extends Component {
               <span className="title-text "><span className="text-dark">GIF</span>MATCH</span>'s so far
             </h5>
             <h5 className="text-center count">
-              {this.getCount()}{this.state ? this.state.count
+              {this.props.count ? this.props.count
               :
               <div className="spinner-border spinner-border-sm" role="status">
                 <span className="sr-only">Loading...</span>
