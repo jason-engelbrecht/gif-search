@@ -74,4 +74,22 @@ body {
     }
 }
 
+@media screen and (max-width: 362px) {
+    .nav-title {
+        font-size: 20px;
+    }
+
+    .counter-title {
+        font-size: 12px;
+    }
+
+    .count {
+        font-size: 12px;
+    }
+
+    .search-container h1 {
+        font-size: 21px;
+    }
+}
+
 
